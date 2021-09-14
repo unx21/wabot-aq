@@ -45,7 +45,7 @@ const defaultMenu = {
 │ Uptime: *%uptime (%muptime)*
 │ Database: %rtotalreg of %totalreg
 │ Github:
-│ %github
+│ https://github.com/Bintangp02/wabot-aq
 ╰────
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
@@ -54,6 +54,7 @@ const defaultMenu = {
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
+BPBOT
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -158,7 +159,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     throw e
   }
 }
-handler.help = ['menu', 'help', '?']
+handler.help = ['menu', 'help', '?','main','p']
 handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
 handler.owner = false
